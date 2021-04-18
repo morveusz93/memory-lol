@@ -98,13 +98,13 @@ function revealCard(numberOfCard)
 {
     if(locked == false)
     {
-        locked = true;
         var imgSrc = 'url(' + cardsOnBoard[numberOfCard] + ')';
         $("#card"+numberOfCard).css("background-image", imgSrc);
         $("#card"+numberOfCard).addClass("flippedCard");
         var opacityValue = $("#card" + numberOfCard).css('opacity');
         if (opacityValue != 0)
         {
+            locked = true;
             if (oneCardIsFlipped == false)
             {
                 oneCardIsFlipped = true;
